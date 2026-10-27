@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="木滋垚 · 大模型开发者个人网站：82M 自研大模型、LoRA 微调、Chrome 扩展开发">
+<title>木滋垚 · 大模型开发者</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== 导航栏 ===== -->
+<nav class="nav">
+  <a class="logo" href="#top">$ whoami<span class="cursor">▊</span></a>
+  <div class="nav-links">
+    <a href="#about">./about</a>
+    <a href="#projects">./projects</a>
+    <a href="#contact">./contact</a>
+  </div>
+</nav>
+
+<!-- ===== Hero：终端窗口 ===== -->
+<header class="hero" id="top">
+  <div class="terminal">
+    <div class="term-bar">
+      <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+      <span class="term-title">mumiziyao@dev:~</span>
+    </div>
+    <div class="term-body">
+      <p class="cmd-line"><span class="prompt">$</span> <span id="typed"></span><span class="cursor">▊</span></p>
+      <p class="out fade d1">&gt; 姓名：木滋垚（2023250814）</p>
+      <p class="out fade d2">&gt; 方向：大模型预训练 / 微调 / AI 辅助开发</p>
+      <p class="out fade d3 ok">&gt; status: [=========&gt;] loss 3.85 → 2.04，已收敛</p>
+    </div>
+  </div>
+  <h1 class="hero-name">&lt;木滋垚 /&gt;</h1>
+  <p class="slogan">把大模型从零训练到会说话，把想法从一句话变成能跑的代码。</p>
+  <div class="hero-tags">
+    <span># 82M 自研 LLM</span><span># LoRA 微调</span><span># Chrome 扩展</span>
+  </div>
+</header>
+
+<main>
+  <!-- ===== 关于我 ===== -->
+  <section class="section reveal" id="about">
+    <h2 class="sec-title">$ ls ./about<span class="comment"># 关于我</span></h2>
+    <p class="bio">
+      哈尔滨工业大学在读，大模型方向实践者。从零实现过 82M 参数的 Decoder-only Transformer 并完成 90
+      万条语料的预训练，跑通过 SFT 全量微调与手写 / peft 两种 LoRA 微调方案；平时用 AI
+      编程工具把想法快速变成可用产品——比如一个已在 GitHub Pages 上线的 Chrome 扩展。
+      相信"先跑通，再变好"：MVP 先行，小步提交，快速迭代。
+    </p>
+    <div class="tags">
+      <span>Python</span><span>PyTorch</span><span>大模型预训练</span><span>SFT</span>
+      <span>LoRA</span><span>Chrome 扩展</span><span>Git</span><span>AI 辅助编程</span>
+    </div>
+  </section>
+
+  <!-- ===== 项目展示 ===== -->
+  <section class="section reveal" id="projects">
+    <h2 class="sec-title">$ ls ./projects<span class="comment"># 项目展示</span></h2>
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon">🔥</div>
+        <h3>82M 自研大模型</h3>
+        <p>从零实现 Decoder-only Transformer（8 层 / hidden 768 / 词表 3 万），90 万条语料预训练，
+           再做 SFT 全量微调与手写 LoRA。预训练 loss 3.85 → 2.04，困惑度 46.7 → 7.68。</p>
+        <div class="stack"><span>PyTorch</span><span>bf16 混合精度</span><span>手写 LoRA</span></div>
+      </article>
+      <article class="card">
+        <div class="card-icon">🤖</div>
+        <h3>Qwen2.5-0.5B LoRA 微调</h3>
+        <p>用 peft 封装库（LoraConfig + Trainer）微调 Qwen2.5-0.5B-Instruct，
+           注入 q/k/v/o/gate/up/down 七处投影，让开源模型学会孙悟空人格对话，可训练参数占比不到 1%。</p>
+        <div class="stack"><span>peft</span><span>transformers</span><span>chat template</span></div>
+      </article>
+      <article class="card">
+        <div class="card-icon">🛒</div>
+        <h3>电商图片下载器 Chrome 扩展</h3>
+        <p>Manifest V3 扩展：自动识别电商详情页主图、懒加载图与 srcset，缩略图勾选后本地打包 ZIP
+           下载，零上传、保护隐私。配套官网已部署上线。</p>
+        <div class="stack"><span>Chrome MV3</span><span>JSZip</span><span>
+          <a href="https://goose617181.github.io/EcomImgDownloader/" target="_blank" rel="noopener">线上官网 →</a>
+        </span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== 联系方式 ===== -->
+  <section class="section reveal" id="contact">
+    <h2 class="sec-title">$ cat ./contact<span class="comment"># 联系方式</span></h2>
+    <div class="term-body inline-term">
+      <p class="cmd-line"><span class="prompt">$</span> cat contact.json</p>
+      <p class="out">{</p>
+      <p class="out">&nbsp;&nbsp;"github": <a href="https://github.com/goose617181" target="_blank" rel="noopener">"github.com/goose617181"</a>,</p>
+      <p class="out">&nbsp;&nbsp;"email":&nbsp;<a href="mailto:2023250814@stu.hit.edu.cn">"2023250814@stu.hit.edu.cn"</a></p>
+      <p class="out">}</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span class="prompt">$</span> exit 0&nbsp;&nbsp;·&nbsp;&nbsp;© 2026 木滋垚 · 用 AI 编程，手写打底
+</footer>
+
+<script>
+// ===== 打字机动画：逐字输出训练命令 =====
+(function () {
+  var cmd = 'python train.py --model myLLM-82M --data 900k --device cuda:0';
+  var el = document.getElementById('typed');
+  var i = 0;
+  (function type() {
+    if (i <= cmd.length) {
+      el.textContent = cmd.slice(0, i++);
+      setTimeout(type, 60);
+    }
+  })();
+})();
+
+// ===== 滚动显现：区块进入视口后淡入 =====
+(function () {
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(function (s) { obs.observe(s); });
+})();
+
+// ===== 锚点平滑滚动 =====
+document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+  a.addEventListener('click', function (ev) {
+    var t = document.querySelector(a.getAttribute('href'));
+    if (t) { ev.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+  });
+});
+</script>
+</body>
+</html>
