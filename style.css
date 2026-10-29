@@ -165,6 +165,10 @@ a:hover { text-decoration: underline; }
   border-radius: 4px; padding: 2px 8px;
 }
 .stack a { color: var(--green); }
+/* 整卡可点击：卡片内容包一层链接，保留终端绿高亮 */
+.card-link { display: block; color: inherit; }
+.card-link:hover { text-decoration: none; }
+.card-link .stack-link { color: var(--green); border-color: rgba(74, 222, 128, 0.35); }
 
 /* ===== 联系方式（内联终端） ===== */
 .inline-term {
